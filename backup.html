@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>100UP!게임</title>
+    <link rel="stylesheet" href="./css/backup.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+    <h1 class="title">신난다 재미난다 팅팅탱탱 백업게임!</h1>
+    <div class="back">
+        <p class="num">0</p>
+    </div>
+    <div class="pl" onclick="pm('+')">
+        +
+    </div>
+    <div class="ma" onclick="pm('-')">
+        -
+    </div>
+    </div>
+</body>
+    <script>
+        var num
+        
+        num = 0;
+        
+        $(".num").text(num);
+            function pm(bu){
+                switch(bu){
+                    case "+":
+                        if(num < 400){
+                            num = num + 100;
+                        }else {
+                            (num = 0);
+                        }
+                        break;
+                        case "-":
+                        if(num > 0){
+                            num = num - 100;
+                        }
+                        break;
+                }
+                 $(".num").text(num);
+            }
+    </script>
+</html>
