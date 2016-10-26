@@ -12,36 +12,35 @@
     <div class="back">
         <p class="num">0</p>
     </div>
-    <div class="pl" onclick="pm('+')">
+    <div class="pl" click="pm()">
         +
     </div>
-    <div class="ma" onclick="pm('-')">
+    <div class="ma" click="pm()">
         -
     </div>
     </div>
 </body>
     <script>
-        var num
         
-        num = 0;
-        
+        var num = 0;
+            setInterval(function(){
+                if (num < 400){
+                num = num + 100;
+                }else {
+                    (num = 0);
+                }
         $(".num").text(num);
             function pm(bu){
-                switch(bu){
-                    case "+":
-                        if(num < 400){
-                            num = num + 100;
-                        }else {
-                            (num = 0);
-                        }
-                        break;
-                        case "-":
-                        if(num > 0){
-                            num = num - 100;
-                        }
-                        break;
-                }
+               
                  $(".num").text(num);
             }
+                }, 1000);
+        ma.onclick{
+             if (num < 400){
+                num = num + 100;
+                }else {
+                    (num = 0);
+                }
+        }    
     </script>
 </html>
